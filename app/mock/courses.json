@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Learning AngularJS",
+    "description": "Beginning parts of AngularJS",
+    "language": "JavaScript",
+    "experienceLevel": 2,
+    "imageUrl": "images/vid-placeholder.png",
+    "progress": 3
+  },
+  {
+    "title": "Ruby on Rails",
+    "description": "Learn to program Ruby on Rails",
+    "language": "Ruby",
+    "experienceLevel": 3,
+    "imageUrl": "images/vid-placeholder.png",
+    "progress": 3
+  },
+  {
+    "title": "HTML & CSS",
+    "description": "Build a web application with HTML and CSS",
+    "language": "HTML, CSS",
+    "experienceLevel": 1,
+    "imageUrl": "images/vid-placeholder.png",
+    "progress": 5
+  },
+  {
+    "title": "Ionic",
+    "description": "Turn your web application to a Native iOS and Android app.",
+    "language": "JavaScript",
+    "experienceLevel": 3,
+    "imageUrl": "images/vid-placeholder.png",
+    "progress": 1
+  },
+  {
+    "title": "Python",
+    "description": "Learn how to use Django",
+    "language": "Python",
+    "experienceLevel": 2,
+    "imageUrl": "images/vid-placeholder.png",
+    "progress": 2
+  }
+]

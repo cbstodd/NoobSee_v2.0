@@ -1,0 +1,23 @@
+<div ng-controller="LikesCtrl">
+    <div class="col-lg-4">
+        <table class="table table-condensed">
+            <thead>
+            <tr>
+                <th>Programming Language</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="tech in technologies | orderBy:'-likes'">
+                <td>{{ tech.name }}</td>
+                <td>{{ tech.likes }}</td>
+                <td>
+                    <a type="button" class="btn btn-success" ng-click="incrementLikes(tech)">Like</a>
+                </td>
+                <td>
+                    <a type="button" class="btn btn-danger" ng-click="decrementLikes(tech)">Dislike</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div><!--~ End LikesCtrl ~-->

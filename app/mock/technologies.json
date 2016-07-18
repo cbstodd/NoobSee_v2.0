@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Ruby",
+    "likes": 0,
+    "dislikes": 0
+  },
+  {
+    "name": "JavaScript",
+    "likes": 0,
+    "dislikes": 0
+  },
+  {
+    "name": "Python",
+    "likes": 0,
+    "dislikes": 0
+  },
+  {
+    "name": "Swift",
+    "likes": 0,
+    "dislikes": 0
+  }
+]

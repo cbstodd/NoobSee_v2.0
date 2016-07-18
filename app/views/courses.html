@@ -1,0 +1,45 @@
+<div ng-controller="CoursesCtrl">
+    <h1>Courses</h1>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="col-lg-3">
+                Sort by: <select class="selectpicker" data-style="btn-primary" ng-model="sortCourse">
+                <option value="title">Course</option>
+                <option value="language">Language</option>
+                <option value="experienceLevel">Level</option>
+            </select>
+            </div>
+            <div class="col-lg-1">
+                Limit: <input type="number" class="form-control" step="1" min="0" max="5" ng-model="rowLimit">
+            </div>
+            <div class="col-lg-8"></div>
+        </div><!-- /.col-lg-12 -->
+
+    </div>
+    <hr class="thick-line">
+    <div class="row">
+        <div class="col-lg-8">
+            <ul class="list-group course well" ng-repeat="course in courses | orderBy:sortCourse | limitTo:rowLimit">
+                <li>
+                    <h3><b>Course:</b> {{ course.title }}</h3></li>
+                <hr>
+                <li>
+                    <img ng-src="{{course.imageUrl}}" alt="" class="img-responsive img-thumbnail course-thumb">
+                </li>
+                <br>
+                <!--<li><b>Index #:</b> {{ $index }}</li>-->
+                <li><b>Description:</b> {{ course.description }}</li>
+                <li><b>Language:</b> {{ course.language }}</li>
+                <li><b>Level:</b> {{ course.experienceLevel | level }}</li>
+                <li><b>Progress:</b><br>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: {{course.progress | progress}}%">
+                            <span class="sr-only"></span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--<div ng-include="coursesView"></div>-->
+    </div>
+</div><!--~ End CoursesCtrl ~-->
