@@ -1,5 +1,6 @@
 /* app css stylesheet */
 body {
+    padding-top: 70px;
     background-color: #232323;
     color: #999999;
 }
@@ -43,9 +44,6 @@ input.ng-invalid.ng-dirty {
     color: #000;
 }
 
-.img-ng {
-    max-width: 50%;
-}
 .hoverwell:hover {
     background-color: #52575c;
     cursor: pointer;
@@ -126,5 +124,10 @@ ul.course {
 }
 
 .course-thumb {
-    max-width: 500px;
+    max-height: 200px;
+}
+
+.img-thumbnail {
+    background-color: transparent;
+    border: 1px solid #272727;
 }
