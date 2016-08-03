@@ -4,8 +4,10 @@ var app = angular.module('noobSee', ['ngRoute'])
                  .config(function ( $routeProvider, $locationProvider ){
                      $routeProvider
                        .when('/', {
-                           templateUrl: 'views/home.html',
-                           controller:  'HomeCtrl'
+                           //TODO: Need to uncomment for production mode
+                            //templateUrl: 'views/home.html',
+                           templateUrl: 'views/courses.html',
+                           controller:  'CoursesCtrl'
                        })
                        .when('/courses', {
                            templateUrl: 'views/courses.html',
@@ -19,6 +21,7 @@ var app = angular.module('noobSee', ['ngRoute'])
                  })
                  .controller('HomeCtrl', function ( $scope ){
                      $scope.message = "Home page";
+
                  });
 
 

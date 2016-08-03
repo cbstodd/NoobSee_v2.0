@@ -1,0 +1,67 @@
+<div ng-controller="NewCourseCtrl">
+    <form method="post">
+        <h3>Add new course</h3>
+
+        <div class="form-group">
+            <label for="courseTitle">Title</label>
+            <input type="text"
+              name="courseTitle"
+              id="courseTitle"
+              class="form-control"
+              value=""
+              title=""
+              required="required"
+              ng-model="courseTitle">
+        </div>
+
+        <div class="form-group">
+            <label for="courseDesc">Description</label>
+            <textarea type="text"
+              name="courseDesc"
+              id="courseDesc"
+              class="form-control"
+              value=""
+              title=""
+              rows="3"
+              required="required"
+              ng-model="courseDesc"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="courseLang">Language</label>
+            <input type="text"
+              name="courseLang"
+              id="courseLang"
+              class="form-control"
+              value=""
+              title=""
+              required="required"
+              ng-model="courseLang">
+        </div>
+
+        <div class="form-group">
+            <label for="courseExp">Experience level</label>
+            <input type="number"
+              name="courseExp"
+              id="courseExp"
+              class="form-control"
+              value="0"
+              title=""
+              required="required"
+              ng-model="courseExp">
+        </div>
+
+        <div class="form-group">
+            <label for="courseImageUrl">Image URL</label>
+            <input type="url"
+              name="courseImageUrl"
+              id="courseImageUrl"
+              class="form-control"
+              value="http://" title=""
+              required="required"
+              ng-model="courseImageUrl">
+        </div>
+
+        <button type="submit" class="btn btn-primary" ng-click="newCourse()">Submit</button>
+    </form>
+</div>

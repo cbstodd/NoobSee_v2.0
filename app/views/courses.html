@@ -1,5 +1,6 @@
 <div ng-controller="CoursesCtrl">
     <h1>Courses</h1>
+
     <div class="row">
         <div class="col-lg-12">
             <div class="col-lg-3">
@@ -34,12 +35,14 @@
                 <li><b>Progress:</b><br>
                     <div class="progress">
                         <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="" aria-valuemin="0" aria-valuemax="100" style="width: {{course.progress | progress}}%">
-                            <span class="sr-only"></span>
+                            {{ course.progress | progress}}%
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
-        <!--<div ng-include="coursesView"></div>-->
+        <div class="col-lg-4">
+            <div ng-include="newCourseForm"></div>
+        </div>
     </div>
 </div><!--~ End CoursesCtrl ~-->
