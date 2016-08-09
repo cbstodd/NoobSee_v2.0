@@ -6,9 +6,10 @@
 var express = require('express');
 var app = express();
 var courseRoutes = require('./app/routes/courses');
-
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+
+//TODO: NEED TO CHANGE TO PRODUCTION DB
 mongoose.connect('mongodb://localhost:27017/noobsee');
 
 // configure app to use bodyParser()

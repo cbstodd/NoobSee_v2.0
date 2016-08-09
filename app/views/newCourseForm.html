@@ -3,65 +3,65 @@
         <h3>Add new course</h3>
 
         <div class="form-group">
-            <label for="courseTitle">Title</label>
+            <label for="title">Title</label>
             <input type="text"
-              name="courseTitle"
-              id="courseTitle"
+              name="title"
+              id="title"
               class="form-control"
               value=""
               title=""
               required="required"
-              ng-model="courseTitle">
+              ng-model="formData.title">
         </div>
 
         <div class="form-group">
-            <label for="courseDesc">Description</label>
+            <label for="description">Description</label>
             <textarea type="text"
-              name="courseDesc"
-              id="courseDesc"
+              name="description"
+              id="description"
               class="form-control"
               value=""
               title=""
               rows="3"
               required="required"
-              ng-model="courseDesc"></textarea>
+              ng-model="formData.description"></textarea>
         </div>
 
         <div class="form-group">
-            <label for="courseLang">Language</label>
+            <label for="language">Language</label>
             <input type="text"
-              name="courseLang"
-              id="courseLang"
+              name="language"
+              id="language"
               class="form-control"
               value=""
               title=""
               required="required"
-              ng-model="courseLang">
+              ng-model="formData.language">
         </div>
 
         <div class="form-group">
-            <label for="courseExp">Experience level</label>
+            <label for="experienceLevel">Experience level</label>
             <input type="number"
-              name="courseExp"
-              id="courseExp"
+              name="experienceLevel"
+              id="experienceLevel"
               class="form-control"
               value="0"
               title=""
               required="required"
-              ng-model="courseExp">
+              ng-model="formData.experienceLevel">
         </div>
 
         <div class="form-group">
-            <label for="courseImageUrl">Image URL</label>
+            <label for="imageUrl">Image URL</label>
             <input type="url"
-              name="courseImageUrl"
-              id="courseImageUrl"
+              name="imageUrl"
+              id="imageUrl"
               class="form-control"
               value="http://" title=""
               required="required"
-              ng-model="courseImageUrl">
+              ng-model="formData.imageUrl">
         </div>
 
-        <button type="submit" class="btn btn-primary" ng-click="newCourse()">Submit</button>
+        <button type="submit" class="btn btn-primary" ng-click="createCourse()">Submit</button>
     </form>
 </div>
