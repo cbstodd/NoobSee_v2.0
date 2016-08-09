@@ -22,12 +22,8 @@ var port = process.env.PORT || 3000; //set database or port 3000.
 
 var router = express.Router();
 
-//Folder where files are served.
-// app.use('/api', express.static('app'));
-app.use('/api', router);
-
 /*------------------------------------------------
- ROUTES FOR OUT API
+ ROUTES FOR API
  ------------------------------------------------*/
 // Create endpoint handlers for /courses
 router.route('/courses')
@@ -40,10 +36,12 @@ router.route('/courses/:course_id')
       .put(courseController.putCourse)
       .delete(courseController.deleteCourse);
 
-/*------------------------------------------------
- START SERVER
- ------------------------------------------------*/
+// Register all our routes with /api
+app.use('/api', router);
 
+/*------------------------------------------------
+  SERVER
+ ------------------------------------------------*/
 app.get('*', function ( req, res ){
     res.sendFile('./app/index.html');
 });

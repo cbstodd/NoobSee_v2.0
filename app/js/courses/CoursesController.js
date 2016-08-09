@@ -20,11 +20,12 @@ app.controller('NewCourseCtrl', function( $scope, $http ){
         console.log('Hey im submitted');
         console.log($scope.formData);
 
-        $http.post('api/courses', $scope.formData)
+        $http.post('/api/courses', $scope.formData)
              .success(function( data ){
                  $scope.formData = {};//Clear form to enter another.
                  $scope.courses = data;
                  console.log(data);
+                 alert("Course was successfully created!");
              })
              .error(function( data ){
                  console.log("Error: " + data);
