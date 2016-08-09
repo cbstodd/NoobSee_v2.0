@@ -5,7 +5,7 @@
  ------------------------------------------------*/
 var express = require('express');
 var app = express();
-var courseController = require('./app/controllers/courses');
+var courseController = require('./api/controllers/courses');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
@@ -25,11 +25,10 @@ var router = express.Router();
 //Folder where files are served.
 // app.use('/api', express.static('app'));
 app.use('/api', router);
+
 /*------------------------------------------------
  ROUTES FOR OUT API
  ------------------------------------------------*/
-
-
 // Create endpoint handlers for /courses
 router.route('/courses')
       .post(courseController.postCourses)
@@ -41,9 +40,6 @@ router.route('/courses/:course_id')
       .put(courseController.putCourse)
       .delete(courseController.deleteCourse);
 
-
-
-
 /*------------------------------------------------
  START SERVER
  ------------------------------------------------*/
@@ -53,4 +49,4 @@ app.get('*', function ( req, res ){
 });
 
 app.listen(port);
-console.log('~~ NoobSee listening on http://localhost:3000 ~~');
+console.log('~~ Express listening on http://localhost:3000 ~~');
