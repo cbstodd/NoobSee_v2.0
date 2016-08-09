@@ -5,7 +5,7 @@
  ------------------------------------------------*/
 var express = require('express');
 var app = express();
-var courseRoutes = require('./app/routes/courses');
+var courseController = require('./app/controllers/courses');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
@@ -20,13 +20,28 @@ app.use(express.static(__dirname + '/app'));
 
 var port = process.env.PORT || 3000; //set database or port 3000.
 
+var router = express.Router();
+
+//Folder where files are served.
+// app.use('/api', express.static('app'));
+app.use('/api', router);
 /*------------------------------------------------
  ROUTES FOR OUT API
  ------------------------------------------------*/
 
-//Folder where files are served.
-// app.use('/api', express.static('app'));
-app.use('/api', courseRoutes);
+
+// Create endpoint handlers for /courses
+router.route('/courses')
+      .post(courseController.postCourses)
+      .get(courseController.getCourses);
+
+// Create endpoint handlers for /courses/:course_id
+router.route('/courses/:course_id')
+      .get(courseController.getCourse)
+      .put(courseController.putCourse)
+      .delete(courseController.deleteCourse);
+
+
 
 
 /*------------------------------------------------
